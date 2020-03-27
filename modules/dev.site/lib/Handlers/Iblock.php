@@ -87,15 +87,11 @@ class Iblock
             ];
             $el->Add($arLoadProduct);
 
-        } else// иначе изменяем уже существующий
-        {
+        } else { // иначе изменяем уже существующий
             $arLoadProduct = [
-                "NAME" => $arFields['ID'],
                 "PREVIEW_TEXT" => implode("->", $ITEMS),
             ];
-            $el->Update($arFields['ID'], $arLoadProduct);
-
-
+            $el->Update($getElement['ID'], $arLoadProduct);
         }
 
     }
